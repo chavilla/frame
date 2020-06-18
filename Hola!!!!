@@ -1,0 +1,22 @@
+Por ahora la idea es que se recopilen los datos del formulario y se manden
+a un email
+
+Mas adelante haremos una página de administracion y crearemos una base de datos
+
+En la ventana modal debe aparecer un presupuesto estimado.
+
+Los precios son los reales 
+El precio que muestre sería por día. Esto es para evitar complicarse si el usuario elige
+más de 2 veces por semana
+
+Precio por Hora (phora) = 17
+Extras:
+windows = 35
+oven = 48
+dobleoven = 58
+armchair2 = 30
+armchair3 = 45
+carpet = 38
+
+Precio total = (Cant de horas seleccionadas * phora) + extras
+
