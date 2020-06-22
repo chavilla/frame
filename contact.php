@@ -63,6 +63,9 @@
 
         # Send the email.
         $success = mail($mail_to, $subject, $content, $headers);
+
+        die(json_encode($success));
+
         if ($success) {
             # Set a 200 (okay) response code.
 
