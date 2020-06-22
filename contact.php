@@ -22,7 +22,7 @@
         $typeClean=$_POST['typeClean'];
 
         # FIX: Replace this email with recipient email
-        $mail_to = "info@cleanworldedinburgh.com";
+        $mail_to = "jcharris.villa@gmail.com";
         
         # Sender Data
         $subject = "Mensaje de la web";
