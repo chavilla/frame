@@ -21,7 +21,6 @@
         $street=$_POST['street'];
         $typeClean=$_POST['typeClean'];
 
-        var_dump($_POST); die;
 
         # FIX: Replace this email with recipient email
         $mail_to = "jcharris.villa@gmail.com";
@@ -64,14 +63,15 @@
         $headers = "From: $name <$email>";
 
         # Send the email.
+
+
+        var_dump($_POST); die();
+
         $success = mail($mail_to, $subject, $content, $headers);
 
-        die(json_encode($success));
 
         if ($success) {
             # Set a 200 (okay) response code.
-
-            die(json_encode($success));
             http_response_code(200);
             echo "Thank you! Your message was sent correctly.";
         } else {
