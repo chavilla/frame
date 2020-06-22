@@ -21,6 +21,8 @@
         $street=$_POST['street'];
         $typeClean=$_POST['typeClean'];
 
+        var_dump($_POST); die;
+
         # FIX: Replace this email with recipient email
         $mail_to = "jcharris.villa@gmail.com";
         
