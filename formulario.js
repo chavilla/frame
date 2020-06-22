@@ -33,7 +33,7 @@ export default class Frame {
 
           console.log(res);
           
-           this.showMessage('Message has been sent','notification-exit');
+           this.showMessage('Message has been sent already','notification-exit');
            this.clean();
          }
          else
