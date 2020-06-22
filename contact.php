@@ -22,10 +22,10 @@
         $typeClean=$_POST['typeClean'];
 
         # FIX: Replace this email with recipient email
-        $mail_to = "jcharris.villa@gmail.com";
+        $mail_to = "info@cleanworldedinburgh.com";
         
         # Sender Data
-        $subject = "Mensaje de la web";
+        $subject = "You have a new message: ";
         
         $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
  
@@ -65,10 +65,13 @@
         $success = mail($mail_to, $subject, $content, $headers);
         if ($success) {
             # Set a 200 (okay) response code.
+
+            die(json_encode($success));
             http_response_code(200);
             echo "Thank you! Your message was sent correctly.";
         } else {
             # Set a 500 (internal server error) response code.
+            die(json_encode($success));
             http_response_code(500);
             echo "Oops! Something went wrong, we couldn't send your message.";
         }

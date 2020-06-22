@@ -39,5 +39,6 @@ $content="Name: $name  $lastName <br/><br/>".
 
 mail($destiny,'Message: ', $content);
 
+die(json_encode($content));
 
 ?>
