@@ -2,6 +2,25 @@
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
+        $address=$_POST['address'];
+        $bedrooms=$_POST['bedrooms'];
+        $bathrooms=$_POST['bathrooms'];
+        $city=$_POST['city'];
+        $code=$_POST['code'];
+        $comments=$_POST['comments'];
+        $details=$_POST['details'];
+        $email=$_POST['email'];
+        $extras=$_POST['extras'];
+        $hours=$_POST['hours'];
+        $lastName=$_POST['lastName'];
+        $name=$_POST['name'];
+        $often=$_POST['often'];
+        $phone=$_POST['phone'];
+        $preferedDay=$_POST['preferedDay'];
+        $preferedTime=$_POST['preferedTime'];
+        $street=$_POST['street'];
+        $typeClean=$_POST['typeClean'];
+
         # FIX: Replace this email with recipient email
         $mail_to = "info@cleanworldedinburgh.com";
         
@@ -11,7 +30,21 @@
         $name = str_replace(array("\r","\n"),array(" "," ") , strip_tags(trim($_POST["name"])));
  
         $email = filter_var(trim($_POST["email"]), FILTER_SANITIZE_EMAIL);
-        $message = trim($_POST["message"]);
+        $message = "Name: $name  $lastName <br/><br/>".
+        "Email: $email <br/><br/>".
+        "Phone: $phone <br/><br/>".
+        "Street: $street <br/><br/>".
+        "Address: $address <br/><br/>".
+        "Postal Code: $code <br/><br/>".
+        "Type Clean: $typeClean <br/><br/>".
+        "Hours por Clean: $hours <br/><br/>".
+        "How Often?: $often <br/><br/>".
+        "Bedrooms: $bedrooms <br/><br/>".
+        "Extras: $extras <br/><br/>".
+        "Prefered Day: $preferedDay <br/><br/>".
+        "Prefered Time: $preferedTime <br/><br/>".
+        "Comments: $comments <br/><br/>".
+        "Details to the areas: $details \n\n";
         
         if ( empty($name) OR !filter_var($email, FILTER_VALIDATE_EMAIL) OR empty($subject) OR empty($message)) {
             # Set a 400 (bad request) response code and exit.
