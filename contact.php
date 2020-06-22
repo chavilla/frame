@@ -1,8 +1,5 @@
 <?php
 
-    ini_set( 'display_errors', 1 );
-    error_reporting( E_ALL );
-
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $address=$_POST['address'];
@@ -26,7 +23,7 @@
 
 
         # FIX: Replace this email with recipient email
-        $mail_to = "jcharris.villa@gmail.com";
+        $mail_to = "info@cleanworldedinburgh.com";
         
         # Sender Data
         $subject = "You have a new message: ";
