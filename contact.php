@@ -1,5 +1,8 @@
 <?php
 
+    ini_set( 'display_errors', 1 );
+    error_reporting( E_ALL );
+
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $address=$_POST['address'];
@@ -63,9 +66,6 @@
         $headers = "From: $name <$email>";
 
         # Send the email.
-
-
-        var_dump($_POST); die();
 
         $success = mail($mail_to, $subject, $content, $headers);
 
